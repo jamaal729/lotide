@@ -10,9 +10,16 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const head = function(arr) {
-  return arr[0];
+const tail = function(arr) {
+  let newArr = [];
+  for (let i = 1; i < arr.length; i++) {
+    newArr.push(arr[i]);
+  }
+  return newArr;
 };
 
-assertEqual(head([5, 6, 7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+const arr = ["Yo Yo", "Lighthouse", "Labs"];
+const newArr = tail(arr);
+for (let i = 0; i < newArr.length; i++) {
+  assertEqual(newArr[i], ["Lighthouse", "Labs"][i]);
+}
