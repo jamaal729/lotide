@@ -1,12 +1,8 @@
 const assertEqual = function(actual, expected) {
-  if (typeof (actual) !== typeof (expected)) {
-    console.log(`❗️  Error: The actual and expected values are not of the same type`);
+  if (actual === expected) {
+    console.log(`✅  Assertion Passed: ${actual} === ${expected}`);
   } else {
-    if (actual === expected) {
-      console.log(`✅  Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      console.log(`🛑  Assertion Failed: ${actual} !== ${expected}`);
-    }
+    console.log(`🛑  Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 
