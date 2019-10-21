@@ -10,8 +10,8 @@ const eqArrays = function(arr1, arr2) {
         equal = false;
         break;
       }
-      equal = true;
     }
+    equal = true;
   }
   return equal;
 };
